@@ -73,7 +73,7 @@ public @interface Threadsafe {}
 bind(List.class).as(Threadsafe.class).to(Vector.class);
 
 class Service {
-  @Inject @Threadsafe List threadsafeList;
+  @Inject @Threadsafe List items;
 }
 
 assert ObjectFactory.getInstance(Service.class).items instanceof Vector;
